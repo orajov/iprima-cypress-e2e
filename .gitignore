@@ -1,0 +1,4 @@
+node_modules
+
+# Cypress report files
+e2e/report
