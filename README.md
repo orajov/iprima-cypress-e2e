@@ -1,11 +1,19 @@
 
-# Cypress demonstration
-## Overview
-This project demonstrates black box automation testing using the Cypress framework written in TypeScript. It showcases automated test case for end-to-end testing of a web application, shwoing efficiency of the Cypress framework combined with TypeScript.
+# Cypress e2e demonstration
+## Spuštění
+1. git clone https://github.com/orajov/iprima-cypress-e2e.git
+2. Nastavení ENV ve vašem zařízení či cypress.config.ts; **CYPRESS_PASSWORD** = Silneheslo123
+3. npm install
+4. npm run test:e2e
+### Nepovinné ENV
+**CYPRESS_HOST**: string (url) - změna prostředí pomocí nastavení jiné url
 
-## Features
-- End-to-End Testing: Comprehensive e2e test scenarios simulating real user interactions.
-- TypeScript Integration: Leveraging TypeScript for type safety and improved developer experience.
-- Cypress Framework: Utilizing Cypress for fast, reliable testing of modern web applications.
-- Black Box Testing: Focus on testing the functionality of the application without knowing its internal code structure.
+**CYPRESS_RESOLUTION**: string (ipad-2,ipad-mini,iphone-3,iphone-4,iphone-5,iphone-6,iphone-6+,iphone-7,iphone-8,iphone-x,iphone-xr,iphone-se2,macbook-11,macbook-13,macbook-15,macbook-16,samsung-note9,samsung-s10)
 
+**CYPRESS_LANGUAGE**: string (cs,en,es,pl) - v případě dodání locales můžeme nastavovat jazyk, nejsou však součástí projektu
+
+## Vysvětlení
+- Report testování se mimo konzoli vygeneruje ve složce e2e/report/video ve formě videa a e2e/report/screenshoots ve formě snímku v případě pádu testu.
+- Záměrně byly ponechány i prázdné soubory a nevyužité funkce pro představu struktury projektu, kdybychom pracovali s daty, jejich interface a jazykovými mutacemi.
+- Identifikátory byly použity pro vyhledávání textu v komponentě. Jedná se o řešení pro práci s jazykovými mutacemi, kdy pomocí pomocí funkce getTranslation načteme do pole locales a poté doplňujeme jednotlivé texty do funkcí. Výhodou je také univerzální použití identifikátorů a krátší kód. Pokud nevyužijeme toto řešení, používáme standardní best practise (data-test, id).
+- Komentáře byly cíleně napsané podrobně vysvětlujícím způsobem pro zadavatele úkolu.
