@@ -20,7 +20,7 @@ export default defineConfig({
     video: true,
     videosFolder: 'e2e/report/videos',
     downloadsFolder: 'e2e/report/downloads',
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 4000,
     retries: 1
   },
 });
